@@ -1,0 +1,13 @@
+# MacOS files
+.DS_Store
+
+# Terraform local directories and files
+.terraform.lock.hcl
+**.terraform/
+*.tfstate*
+.terraformrc
+terraform.rc
+
+# Log files
+*.log
+
