@@ -5,6 +5,8 @@ locals {
   name   = "quick-aws-ec2"
   region = "eu-west-3"
 
+  description = "Quick AWS EC2"
+
   kms_name            = local.name
   vpc_name            = local.name
   security_group_name = local.name

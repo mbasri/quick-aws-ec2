@@ -26,9 +26,25 @@ output:
 
     Terraform project which create VPC and EC2 resource on AWS from scratch.
 
-    ## Create the infrastructure
+    ## *Create and destroy the infrastructure*
 
-    ## Delete the infrastructure
+    ### 2. Create infrastructure
+
+    ```shell
+    git clone https://gitlab.com/mbasri/quick-aws-ec2.git
+    cd quick-aws-ec2
+    terraform init
+    terraform apply
+    ```
+
+    ### 2. Destroy infrastructure
+
+    ```shell
+    git clone https://gitlab.com/mbasri/quick-aws-ec2.git
+    cd quick-aws-ec2
+    terraform init
+    terraform destroy
+    ```
 
     ## Generate docs
     
@@ -37,6 +53,15 @@ output:
     ```
 
     {{ .Content }}
+
+    ## Author
+
+    * [**Mohamed BASRI**](https://gitlab.com/mbasri)
+
+    ## License
+
+    This is free and unencumbered software released into the public domain - see the [LICENSE](./LICENSE) file for details
+
     <!-- END_TF_DOCS -->
 
 output-values:
