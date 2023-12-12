@@ -16,7 +16,7 @@ data "template_cloudinit_config" "main" {
   part {
     content_type = "text/x-shellscript"
     content = templatefile("${path.module}/scripts.d/02-tagger.sh.tpl", {
-      region             = local.region
+      region = local.region
     })
   }
 }

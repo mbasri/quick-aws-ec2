@@ -10,6 +10,8 @@ module "ec2" {
   ami           = "ami-0302f42a44bf53a45"
   instance_type = "t3.micro"
 
+  disable_api_termination = false
+
   iam_instance_profile = module.iam-instance-profile.iam_instance_profile_id
 
   subnet_id = module.vpc.private_subnet_ids.0
