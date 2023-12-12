@@ -130,7 +130,80 @@ output "security_group_description" {
 #---------------------------------------------------------------------------------------------------
 # IAM Instance Profile
 #---------------------------------------------------------------------------------------------------
+output "iam_instance_profile_arn" {
+  description = "The ARN of the IAM Instance Profile"
+  value       = module.iam-instance-profile.iam_instance_profile_arn
+}
+
+output "iam_instance_profile_id" {
+  description = "The ID of the IAM Instance Profile"
+  value       = module.iam-instance-profile.iam_instance_profile_id
+}
+
+output "iam_instance_profile_name" {
+  description = "The Name of the IAM Instance Profile"
+  value       = module.iam-instance-profile.iam_instance_profile_name
+}
 
 #---------------------------------------------------------------------------------------------------
 # EC2
 #---------------------------------------------------------------------------------------------------
+output "instance_id" {
+  description = "The Instance ID"
+  value       = module.ec2.instance_id
+}
+
+output "instance_arn" {
+  description = "The Instance ARN"
+  value       = module.ec2.instance_arn
+}
+
+output "instance_availability_zone" {
+  description = "The availability zone of the created instance"
+  value       = module.ec2.instance_availability_zone
+}
+
+output "instance_key_name" {
+  description = "The Key used by the Instance"
+  value       = module.ec2.instance_key_name
+}
+
+output "instance_primary_network_interface_id" {
+  description = "The ID of the instance's primary network interface"
+  value       = module.ec2.instance_primary_network_interface_id
+}
+
+output "instance_private_dns" {
+  description = "The private DNS name assigned to the instance. Can only be used inside the Amazon EC2, and only available if you've enabled DNS hostnames for your VPC"
+  value       = module.ec2.instance_private_dns
+}
+
+output "instance_private_ip" {
+  description = "The private IP address assigned to the instance"
+  value       = module.ec2.instance_private_ip
+}
+
+output "instance_vpc_security_group_ids" {
+  description = "List of security group used by the instance"
+  value       = module.ec2.instance_vpc_security_group_ids
+}
+
+output "instance_subnet_id" {
+  description = "Subnet used by the instance"
+  value       = module.ec2.instance_subnet_id
+}
+
+output "instance_instance_state" {
+  description = "The state of the instance"
+  value       = module.ec2.instance_instance_state
+}
+
+output "instance_root_block_device_volume_ids" {
+  description = "Root EBS IDs"
+  value       = module.ec2.instance_root_block_device_volume_ids
+}
+
+output "instance_ebs_block_device_volume_ids" {
+  description = "Block devices IDs"
+  value       = module.ec2.instance_ebs_block_device_volume_ids
+}
