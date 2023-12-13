@@ -7,8 +7,8 @@ module "ec2" {
   instance_name = local.instance_name
   description   = local.description
 
-  ami           = "ami-0302f42a44bf53a45"
-  instance_type = "t3.micro"
+  ami           = "ami-0f8cdd0475de9108f"
+  instance_type = "m5.2xlarge"
 
   disable_api_termination = false
 
