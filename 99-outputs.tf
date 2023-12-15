@@ -207,3 +207,11 @@ output "instance_ebs_block_device_volume_ids" {
   description = "Block devices IDs"
   value       = module.ec2.instance_ebs_block_device_volume_ids
 }
+
+#---------------------------------------------------------------------------------------------------
+# Others
+#---------------------------------------------------------------------------------------------------
+output "ssm_session" {
+  description = "Command to start ssm session"
+  value       = "aws --profile lab --region ${local.region} ssm start-session --target ${module.ec2.instance_id}"
+}
