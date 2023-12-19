@@ -19,7 +19,7 @@ module "ec2" {
     module.security-group.security_group_id
   ]
 
-  user_data = data.template_cloudinit_config.main.rendered
+  user_data = data.cloudinit_config.main.rendered
 
   metadata_options = {
     http_endpoint               = "enabled"
