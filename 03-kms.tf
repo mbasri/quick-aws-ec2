@@ -6,6 +6,7 @@ module "kms" {
 
   kms_name                = local.kms_name
   description             = local.description
+  enable_cloudwatch_logs  = true
   deletion_window_in_days = 7
 
   tags = local.tags
