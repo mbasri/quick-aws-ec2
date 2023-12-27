@@ -6,6 +6,8 @@ module "vpc" {
 
   vpc_name = local.vpc_name
 
+  kms_arn = module.kms.key_alias_arn
+
   enable_nat_gateway = true
 
   vpc_cidr            = "10.170.32.0/22"
