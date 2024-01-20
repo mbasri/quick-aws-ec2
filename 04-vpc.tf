@@ -2,13 +2,16 @@
 # VPC
 #---------------------------------------------------------------------------------------------------
 module "vpc" {
-  source = "git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-vpc?ref=v1.3.1"
+  source = "git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-vpc?ref=v1.4.0"
 
   vpc_name = local.vpc_name
 
   kms_arn = module.kms.key_arn
 
   enable_nat_gateway = true
+
+  enable_cloudwatch_vpc_flow_logs = false
+  bucket_arn_vpc_flow_logs        = null
 
   vpc_cidr = "10.170.32.0/22"
 
