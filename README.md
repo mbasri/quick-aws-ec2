@@ -35,14 +35,14 @@ terraform-docs -c .terraform-docs.yml .
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.6.6 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.31.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.7.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.32.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.31.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.32.1 |
 | <a name="provider_cloudinit"></a> [cloudinit](#provider\_cloudinit) | 2.3.3 |
 
 ## Modules
@@ -53,13 +53,13 @@ terraform-docs -c .terraform-docs.yml .
 | <a name="module_iam-instance-profile"></a> [iam-instance-profile](#module\_iam-instance-profile) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-iam-instance-profile | v1.0.0 |
 | <a name="module_kms"></a> [kms](#module\_kms) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-kms | v1.0.4 |
 | <a name="module_security-group"></a> [security-group](#module\_security-group) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-security-group | v1.0.2 |
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-vpc | v1.3.1 |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-vpc | v1.5.0 |
 
 ## Resources
 
 | Name | Type |
 |------|------|
-| [aws_ssm_parameter.main](https://registry.terraform.io/providers/hashicorp/aws/5.31.0/docs/resources/ssm_parameter) | resource |
+| [aws_ssm_parameter.main](https://registry.terraform.io/providers/hashicorp/aws/5.32.1/docs/resources/ssm_parameter) | resource |
 | [cloudinit_config.main](https://registry.terraform.io/providers/hashicorp/cloudinit/latest/docs/data-sources/config) | data source |
 
 ## Inputs

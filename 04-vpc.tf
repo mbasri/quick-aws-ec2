@@ -2,7 +2,7 @@
 # VPC
 #---------------------------------------------------------------------------------------------------
 module "vpc" {
-  source = "git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-vpc?ref=v1.4.0"
+  source = "git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-vpc?ref=v1.5.0"
 
   vpc_name = local.vpc_name
 
@@ -11,7 +11,8 @@ module "vpc" {
   enable_nat_gateway = true
 
   enable_cloudwatch_vpc_flow_logs = false
-  bucket_arn_vpc_flow_logs        = null
+  bucket_arn_vpc_flow_logs        = null #"arn:aws:s3:::<BUCKET_NAME>"
+  bucket_arn_resolvers_logs       = null #"arn:aws:s3:::<BUCKET_NAME>"
 
   vpc_cidr = "10.170.32.0/22"
 
