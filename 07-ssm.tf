@@ -11,9 +11,9 @@ resource "aws_ssm_parameter" "main" {
   name        = local.ssm_parameter_name
   description = local.description
   type        = "String"
-  value       = templatefile("${path.module}/ssm.d/01-cloudwatch-agent.json", {
+  value = templatefile("${path.module}/ssm.d/01-cloudwatch-agent.json", {
     vpc_id = module.vpc.vpc_id
   })
-  tags        = merge(local.tags, tomap({ "Name" = local.ssm_parameter_name }))
-  tier        = "Advanced"
+  tags = merge(local.tags, tomap({ "Name" = local.ssm_parameter_name }))
+  tier = "Advanced"
 }
