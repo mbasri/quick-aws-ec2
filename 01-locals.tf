@@ -29,7 +29,7 @@ locals {
 
     "technical:terraform"                     = "true",
     "technical:terraform:scm"                 = "https://gitlab.com/mbasri/quick-aws-ec2.git",
-    "technical:terraform:required-version"    = "1.7.0",
-    "technical:provider:aws:required-version" = "5.32.1"
+    "technical:terraform:required-version"    = "1.9.4",
+    "technical:provider:aws:required-version" = "5.62.0"
   }
 }

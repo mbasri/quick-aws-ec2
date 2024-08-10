@@ -2,7 +2,7 @@
 # EC2
 #---------------------------------------------------------------------------------------------------
 module "ec2" {
-  source = "git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-ec2?ref=v1.0.0"
+  source = "git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-ec2?ref=v1.1.0"
 
   instance_name = local.instance_name
   description   = local.description

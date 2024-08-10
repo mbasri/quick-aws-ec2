@@ -43,17 +43,17 @@ terraform-docs -c .terraform-docs.yml .
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | 5.32.1 |
-| <a name="provider_cloudinit"></a> [cloudinit](#provider\_cloudinit) | 2.3.3 |
+| <a name="provider_cloudinit"></a> [cloudinit](#provider\_cloudinit) | n/a |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_ec2"></a> [ec2](#module\_ec2) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-ec2 | v1.0.0 |
-| <a name="module_iam-instance-profile"></a> [iam-instance-profile](#module\_iam-instance-profile) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-iam-instance-profile | v1.0.0 |
-| <a name="module_kms"></a> [kms](#module\_kms) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-kms | v1.0.4 |
-| <a name="module_security-group"></a> [security-group](#module\_security-group) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-security-group | v1.0.2 |
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-vpc | v1.5.0 |
+| <a name="module_ec2"></a> [ec2](#module\_ec2) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-ec2 | v1.1.0 |
+| <a name="module_iam-instance-profile"></a> [iam-instance-profile](#module\_iam-instance-profile) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-iam-instance-profile | v1.1.0 |
+| <a name="module_kms"></a> [kms](#module\_kms) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-kms | v1.2.0 |
+| <a name="module_security-group"></a> [security-group](#module\_security-group) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-security-group | v1.1.0 |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-vpc | v1.6.0 |
 
 ## Resources
 
