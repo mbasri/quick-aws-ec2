@@ -9,67 +9,67 @@
            "collect_list":[
               {
                  "file_path":"/var/log/dmesg",
-                 "log_group_name":"/var/log/dmesg",
+                 "log_group_name":"/var/log/dmesg/${vpc_id}",
                  "log_stream_name":"{instance_id}"
               },
               {
                  "file_path":"/var/log/messages",
-                 "log_group_name":"/var/log/messages",
+                 "log_group_name":"/var/log/messages/${vpc_id}",
                  "log_stream_name":"{instance_id}"
               },
               {
                  "file_path":"/var/log/yum.log",
-                 "log_group_name":"/var/log/yum.log",
+                 "log_group_name":"/var/log/yum.log/${vpc_id}",
                  "log_stream_name":"{instance_id}"
               },
               {
                  "file_path":"/var/log/awslogs.log",
-                 "log_group_name":"/var/log/awslogs.log",
+                 "log_group_name":"/var/log/awslogs.log/${vpc_id}",
                  "log_stream_name":"{instance_id}"
               },
               {
                  "file_path":"/var/log/cron",
-                 "log_group_name":"/var/log/cron",
+                 "log_group_name":"/var/log/cron/${vpc_id}",
                  "log_stream_name":"{instance_id}"
               },
               {
                  "file_path":"/var/log/secure",
-                 "log_group_name":"/var/log/secure",
+                 "log_group_name":"/var/log/secure/${vpc_id}",
                  "log_stream_name":"{instance_id}"
               },
               {
                  "file_path":"/var/log/audit/audit.log",
-                 "log_group_name":"/var/log/audit/audit.log",
+                 "log_group_name":"/var/log/audit/audit.log/${vpc_id}",
                  "log_stream_name":"{instance_id}"
               },
               {
                  "file_path":"/var/log/docker",
-                 "log_group_name":"/var/log/docker",
+                 "log_group_name":"/var/log/docker/${vpc_id}",
                  "log_stream_name":"{instance_id}"
               },
               {
                  "file_path":"/var/log/ecs/audit.log",
-                 "log_group_name":"/var/log/ecs/audit.log",
+                 "log_group_name":"/var/log/ecs/audit.log/${vpc_id}",
                  "log_stream_name":"{instance_id}"
               },
               {
                  "file_path":"/var/log/ecs/ecs-agent.log",
-                 "log_group_name":"/var/log/ecs/ecs-agent.log",
+                 "log_group_name":"/var/log/ecs/ecs-agent.log/${vpc_id}",
                  "log_stream_name":"{instance_id}"
               },
               {
                  "file_path":"/var/log/ecs/ecs-init.log",
-                 "log_group_name":"/var/log/ecs/ecs-init.log",
+                 "log_group_name":"/var/log/ecs/ecs-init.log/${vpc_id}",
                  "log_stream_name":"{instance_id}"
               },
               {
                  "file_path":"/var/log/ecs/ecs-start-task.log",
-                 "log_group_name":"/var/log/ecs/ecs-start-task.log",
+                 "log_group_name":"/var/log/ecs/ecs-start-task.log/${vpc_id}",
                  "log_stream_name":"{instance_id}"
               },
               {
                  "file_path":"/var/log/ecs/ecs-volume-plugin.log",
-                 "log_group_name":"/var/log/ecs/ecs-volume-plugin.log",
+                 "log_group_name":"/var/log/ecs/ecs-volume-plugin.log/${vpc_id}",
                  "log_stream_name":"{instance_id}"
               }
            ]
@@ -78,7 +78,7 @@
   },
   "metrics":{
      "append_dimensions":{
-        "InstanceId":"${aws:InstanceId}"
+        "InstanceId":"$${aws:InstanceId}"
      },
      "metrics_collected":{
         "collectd":{
