@@ -38,5 +38,7 @@ module "ec2" {
     throughput            = null
   }
 
+  enable_spot_instance = true
+
   tags = local.tags
 }

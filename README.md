@@ -35,15 +35,15 @@ terraform-docs -c .terraform-docs.yml .
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.7.0 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.32.1 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.9.4 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.62.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.32.1 |
-| <a name="provider_cloudinit"></a> [cloudinit](#provider\_cloudinit) | n/a |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.62.0 |
+| <a name="provider_cloudinit"></a> [cloudinit](#provider\_cloudinit) | 2.3.4 |
 
 ## Modules
 
@@ -59,7 +59,7 @@ terraform-docs -c .terraform-docs.yml .
 
 | Name | Type |
 |------|------|
-| [aws_ssm_parameter.main](https://registry.terraform.io/providers/hashicorp/aws/5.32.1/docs/resources/ssm_parameter) | resource |
+| [aws_ssm_parameter.main](https://registry.terraform.io/providers/hashicorp/aws/5.62.0/docs/resources/ssm_parameter) | resource |
 | [cloudinit_config.main](https://registry.terraform.io/providers/hashicorp/cloudinit/latest/docs/data-sources/config) | data source |
 
 ## Inputs
@@ -80,10 +80,12 @@ No inputs.
 | <a name="output_instance_id"></a> [instance\_id](#output\_instance\_id) | The Instance ID |
 | <a name="output_instance_instance_state"></a> [instance\_instance\_state](#output\_instance\_instance\_state) | The state of the instance |
 | <a name="output_instance_key_name"></a> [instance\_key\_name](#output\_instance\_key\_name) | The Key used by the Instance |
+| <a name="output_instance_lifecycle"></a> [instance\_lifecycle](#output\_instance\_lifecycle) | Indicates whether this is a Spot Instance or a Scheduled Instance |
 | <a name="output_instance_primary_network_interface_id"></a> [instance\_primary\_network\_interface\_id](#output\_instance\_primary\_network\_interface\_id) | The ID of the instance's primary network interface |
 | <a name="output_instance_private_dns"></a> [instance\_private\_dns](#output\_instance\_private\_dns) | The private DNS name assigned to the instance. Can only be used inside the Amazon EC2, and only available if you've enabled DNS hostnames for your VPC |
 | <a name="output_instance_private_ip"></a> [instance\_private\_ip](#output\_instance\_private\_ip) | The private IP address assigned to the instance |
 | <a name="output_instance_root_block_device_volume_ids"></a> [instance\_root\_block\_device\_volume\_ids](#output\_instance\_root\_block\_device\_volume\_ids) | Root EBS IDs |
+| <a name="output_instance_spot_request_id"></a> [instance\_spot\_request\_id](#output\_instance\_spot\_request\_id) | If the request is a Spot Instance request, the ID of the request |
 | <a name="output_instance_subnet_id"></a> [instance\_subnet\_id](#output\_instance\_subnet\_id) | Subnet used by the instance |
 | <a name="output_instance_vpc_security_group_ids"></a> [instance\_vpc\_security\_group\_ids](#output\_instance\_vpc\_security\_group\_ids) | List of security group used by the instance |
 | <a name="output_key_alias_arn"></a> [key\_alias\_arn](#output\_key\_alias\_arn) | The Amazon Resource Name (ARN) of the key alias |
@@ -105,10 +107,14 @@ No inputs.
 | <a name="output_security_group_name"></a> [security\_group\_name](#output\_security\_group\_name) | The name of the security group |
 | <a name="output_security_group_owner_id"></a> [security\_group\_owner\_id](#output\_security\_group\_owner\_id) | The owner ID |
 | <a name="output_security_group_vpc_id"></a> [security\_group\_vpc\_id](#output\_security\_group\_vpc\_id) | The VPC ID |
-| <a name="output_spot_logging_cwl_id"></a> [spot\_logging\_cwl\_id](#output\_spot\_logging\_cwl\_id) | The IDs of the cloudwatch logs for Spot logging |
+| <a name="output_spot_logs_cwl_id"></a> [spot\_logs\_cwl\_id](#output\_spot\_logs\_cwl\_id) | The IDs of the cloudwatch logs for Spot logging |
+| <a name="output_ssh_start_socks_v5_proxy"></a> [ssh\_start\_socks\_v5\_proxy](#output\_ssh\_start\_socks\_v5\_proxy) | Command to copy ssh key to the instance |
+| <a name="output_ssm_copy_ssh_key"></a> [ssm\_copy\_ssh\_key](#output\_ssm\_copy\_ssh\_key) | Command to copy ssh key to the instance |
+| <a name="output_ssm_port_forward"></a> [ssm\_port\_forward](#output\_ssm\_port\_forward) | Command to start ssm port forwarding session |
 | <a name="output_ssm_session"></a> [ssm\_session](#output\_ssm\_session) | Command to start ssm session |
+| <a name="output_system_logs_cwl_id"></a> [system\_logs\_cwl\_id](#output\_system\_logs\_cwl\_id) | The IDs of the cloudwatch logs for VM system logs |
 | <a name="output_vpc_cidr_blocks"></a> [vpc\_cidr\_blocks](#output\_vpc\_cidr\_blocks) | The CIDR block of the VPC |
-| <a name="output_vpc_flow_log_cwl_id"></a> [vpc\_flow\_log\_cwl\_id](#output\_vpc\_flow\_log\_cwl\_id) | The ID of the cloudwatch logs for VPC flow logs |
+| <a name="output_vpc_flow_logs_cwl_id"></a> [vpc\_flow\_logs\_cwl\_id](#output\_vpc\_flow\_logs\_cwl\_id) | The ID of the cloudwatch logs for VPC flow logs |
 | <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | The ID of the VPC |
 
 ## Author

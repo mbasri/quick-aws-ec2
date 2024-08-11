@@ -213,10 +213,35 @@ output "instance_ebs_block_device_volume_ids" {
   value       = module.ec2.instance_ebs_block_device_volume_ids
 }
 
+output "instance_lifecycle" {
+  description = "Indicates whether this is a Spot Instance or a Scheduled Instance"
+  value       = module.ec2.instance_lifecycle
+}
+
+output "instance_spot_request_id" {
+  description = "If the request is a Spot Instance request, the ID of the request"
+  value       = module.ec2.instance_spot_request_id
+}
+
 #---------------------------------------------------------------------------------------------------
 # Others
 #---------------------------------------------------------------------------------------------------
 output "ssm_session" {
   description = "Command to start ssm session"
   value       = "aws --profile lab --region ${local.region} ssm start-session --target ${module.ec2.instance_id}"
+}
+
+output "ssm_port_forward" {
+  description = "Command to start ssm port forwarding session"
+  value       = "aws --profile lab --region ${local.region} ssm start-session --target ${module.ec2.instance_id} --document-name AWS-StartPortForwardingSession --parameters '{\"portNumber\":[\"22\"],\"localPortNumber\":[\"2222\"]}' > /dev/null 2>&1 &"
+}
+
+output "ssm_copy_ssh_key" {
+  description = "Command to copy ssh key to the instance"
+  value       = "aws --profile lab --region ${local.region} ec2-instance-connect send-ssh-public-key --instance-id ${module.ec2.instance_id} --availability-zone ${module.ec2.instance_availability_zone} --instance-os-user ec2-user --ssh-public-key file://~/.ssh/.pub"
+}
+
+output "ssh_start_socks_v5_proxy" {
+  description = "Command to copy ssh key to the instance"
+  value       = "ssh -fND 127.0.0.1:3000 -p2222 ec2-user@127.0.0.1 -i ~/.ssh/"
 }
