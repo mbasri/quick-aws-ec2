@@ -242,6 +242,6 @@ output "ssm_copy_ssh_key" {
 }
 
 output "ssh_start_socks_v5_proxy" {
-  description = "Command to copy ssh key to the instance"
+  description = "Command to start socks v5 proxy"
   value       = "ssh -fND 127.0.0.1:3000 -p2222 ec2-user@127.0.0.1 -i ~/.ssh/"
 }
