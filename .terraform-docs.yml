@@ -28,7 +28,7 @@ output:
 
     ## *Create and destroy the infrastructure*
 
-    ### 2. Create infrastructure
+    ### 1. Create infrastructure
 
     ```shell
     git clone https://gitlab.com/mbasri/quick-aws-ec2.git
@@ -46,7 +46,20 @@ output:
     terraform destroy
     ```
 
-    ## Generate docs
+    ## *Use the EC2 instance*
+
+    ### 1. Connect to the EC2 instance
+
+    See the Terrafom output 'ssm_session'
+
+    ### 2. Run a proxy server
+
+    ```shell 
+    chmod +x run-proxy
+    ./run-proxy
+    ```
+
+    ## *Generate docs*
     
     ```shell
     terraform-docs -c .terraform-docs.yml .
@@ -54,11 +67,11 @@ output:
 
     {{ .Content }}
 
-    ## Author
+    ## *Author*
 
     * [**Mohamed BASRI**](https://gitlab.com/mbasri)
 
-    ## License
+    ## *License*
 
     This is free and unencumbered software released into the public domain - see the [LICENSE](./LICENSE) file for details
 

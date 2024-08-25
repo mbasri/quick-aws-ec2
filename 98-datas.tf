@@ -7,7 +7,7 @@ data "cloudinit_config" "main" {
 
   part {
     content_type = "text/x-shellscript"
-    content = templatefile("${path.module}/scripts.d/01-init.sh.tpl", {
+    content = templatefile("${path.module}/scripts.d/user-data.d/01-init.sh.tpl", {
       region             = local.region
       ssm_parameter_name = local.ssm_parameter_name
     })
@@ -15,7 +15,7 @@ data "cloudinit_config" "main" {
 
   part {
     content_type = "text/x-shellscript"
-    content = templatefile("${path.module}/scripts.d/02-tagger.sh.tpl", {
+    content = templatefile("${path.module}/scripts.d/user-data.d/02-tagger.sh.tpl", {
       region = local.region
     })
   }

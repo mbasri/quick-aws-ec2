@@ -7,7 +7,7 @@ Terraform project which create VPC and EC2 resource on AWS from scratch.
 
 ## *Create and destroy the infrastructure*
 
-### 2. Create infrastructure
+### 1. Create infrastructure
 
 ```shell
 git clone https://gitlab.com/mbasri/quick-aws-ec2.git
@@ -25,7 +25,20 @@ terraform init
 terraform destroy
 ```
 
-## Generate docs
+## *Use the EC2 instance*
+
+### 1. Connect to the EC2 instance
+
+See the Terrafom output 'ssm_session'
+
+### 2. Run a proxy server
+
+```shell 
+chmod +x run-proxy
+./run-proxy
+```
+
+## *Generate docs*
 
 ```shell
 terraform-docs -c .terraform-docs.yml .
@@ -44,6 +57,7 @@ terraform-docs -c .terraform-docs.yml .
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | 5.62.0 |
 | <a name="provider_cloudinit"></a> [cloudinit](#provider\_cloudinit) | 2.3.4 |
+| <a name="provider_local"></a> [local](#provider\_local) | 2.5.1 |
 
 ## Modules
 
@@ -60,6 +74,7 @@ terraform-docs -c .terraform-docs.yml .
 | Name | Type |
 |------|------|
 | [aws_ssm_parameter.main](https://registry.terraform.io/providers/hashicorp/aws/5.62.0/docs/resources/ssm_parameter) | resource |
+| [local_file.run-proxy](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file) | resource |
 | [cloudinit_config.main](https://registry.terraform.io/providers/hashicorp/cloudinit/latest/docs/data-sources/config) | data source |
 
 ## Inputs
@@ -108,7 +123,7 @@ No inputs.
 | <a name="output_security_group_owner_id"></a> [security\_group\_owner\_id](#output\_security\_group\_owner\_id) | The owner ID |
 | <a name="output_security_group_vpc_id"></a> [security\_group\_vpc\_id](#output\_security\_group\_vpc\_id) | The VPC ID |
 | <a name="output_spot_logs_cwl_id"></a> [spot\_logs\_cwl\_id](#output\_spot\_logs\_cwl\_id) | The IDs of the cloudwatch logs for Spot logging |
-| <a name="output_ssh_start_socks_v5_proxy"></a> [ssh\_start\_socks\_v5\_proxy](#output\_ssh\_start\_socks\_v5\_proxy) | Command to copy ssh key to the instance |
+| <a name="output_ssh_start_socks_v5_proxy"></a> [ssh\_start\_socks\_v5\_proxy](#output\_ssh\_start\_socks\_v5\_proxy) | Command to start socks v5 proxy |
 | <a name="output_ssm_copy_ssh_key"></a> [ssm\_copy\_ssh\_key](#output\_ssm\_copy\_ssh\_key) | Command to copy ssh key to the instance |
 | <a name="output_ssm_port_forward"></a> [ssm\_port\_forward](#output\_ssm\_port\_forward) | Command to start ssm port forwarding session |
 | <a name="output_ssm_session"></a> [ssm\_session](#output\_ssm\_session) | Command to start ssm session |
@@ -117,11 +132,11 @@ No inputs.
 | <a name="output_vpc_flow_logs_cwl_id"></a> [vpc\_flow\_logs\_cwl\_id](#output\_vpc\_flow\_logs\_cwl\_id) | The ID of the cloudwatch logs for VPC flow logs |
 | <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | The ID of the VPC |
 
-## Author
+## *Author*
 
 * [**Mohamed BASRI**](https://gitlab.com/mbasri)
 
-## License
+## *License*
 
 This is free and unencumbered software released into the public domain - see the [LICENSE](./LICENSE) file for details
 
