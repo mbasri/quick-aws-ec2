@@ -4,4 +4,8 @@
 provider "aws" {
   profile = "lab"
   region  = local.region
+
+  default_tags {
+    tags = local.tags
+  }
 }

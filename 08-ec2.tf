@@ -7,8 +7,10 @@ module "ec2" {
   instance_name = local.instance_name
   description   = local.description
 
-  ami           = "ami-07a4c6232c4e5a0ec"
-  instance_type = "m7g.xlarge"
+  # Europe (Paris) eu-west-3
+  # Amazon Linux 2023 AMI 2023.6.20250107.0 arm64 HVM kernel-6.1
+  ami           = "ami-0ae9eb1a7a2e89c37"
+  instance_type = "m7g.medium"
 
   disable_api_termination = false
 
@@ -33,8 +35,8 @@ module "ec2" {
     encrypted             = true
     iops                  = 3000
     kms_key_id            = module.kms.key_arn
-    volume_size           = 500
-    volume_type           = "io1"
+    volume_size           = 30
+    volume_type           = "gp3"
     throughput            = null
   }
 
