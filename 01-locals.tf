@@ -28,7 +28,7 @@ locals {
     "security:encryption"     = "true",
 
     "technical:terraform"                     = "true",
-    "technical:terraform:scm"                 = "https://gitlab.com/mbasri/quick-aws-ec2.git",
+    "technical:terraform:scm"                 = "https://github.com/mbasri/quick-aws-ec2.git",
     "technical:terraform:required-version"    = "1.10.2",
     "technical:provider:aws:required-version" = "5.81.0"
   }
