@@ -24,3 +24,11 @@ jobs:
       id: fmt
       run: terraform fmt -check
       continue-on-error: false
+
+    - name: Terraform Init
+      id: init
+      run: terraform init
+    
+    - name: Terraform Validate
+      id: validate
+      run: terraform validate -no-color
