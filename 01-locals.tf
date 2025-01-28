@@ -18,7 +18,7 @@ locals {
     "Name"        = local.name,
     "Description" = "Quick AWS EC2",
 
-    "billing:organisation"      = "mbasri",
+    "billing:organisation"        = "mbasri",
     "billing:organisation-unit" = "labs",
     "billing:application"       = "quick-aws-ec2",
     "billing:environment"       = "dev",
