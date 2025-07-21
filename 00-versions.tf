@@ -3,9 +3,9 @@
 # Provider AWS CHANGELOG : https://github.com/hashicorp/terraform-provider-aws/blob/main/CHANGELOG.md
 #---------------------------------------------------------------------------------------------------
 terraform {
-  required_version = "1.10.2"
+  required_version = "1.12.2"
 
   required_providers {
-    aws = "5.81.0"
+    aws = "6.4.0"
   }
 }

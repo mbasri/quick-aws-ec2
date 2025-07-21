@@ -2,7 +2,7 @@
 # Security Group
 #---------------------------------------------------------------------------------------------------
 module "security-group" {
-  source = "git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-security-group?ref=v1.2.0"
+  source = "git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-security-group?ref=v1.3.0"
 
   vpc_id = module.vpc.vpc_id
 

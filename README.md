@@ -48,32 +48,32 @@ terraform-docs -c .terraform-docs.yml .
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.10.2 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.81.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.12.2 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 6.4.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.81.0 |
-| <a name="provider_cloudinit"></a> [cloudinit](#provider\_cloudinit) | 2.3.5 |
-| <a name="provider_local"></a> [local](#provider\_local) | 2.5.2 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 6.4.0 |
+| <a name="provider_cloudinit"></a> [cloudinit](#provider\_cloudinit) | n/a |
+| <a name="provider_local"></a> [local](#provider\_local) | n/a |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_ec2"></a> [ec2](#module\_ec2) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-ec2 | v1.2.0 |
-| <a name="module_iam-instance-profile"></a> [iam-instance-profile](#module\_iam-instance-profile) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-iam-instance-profile | v1.2.0 |
-| <a name="module_kms"></a> [kms](#module\_kms) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-kms | v1.3.0 |
-| <a name="module_security-group"></a> [security-group](#module\_security-group) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-security-group | v1.2.0 |
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-vpc | v1.7.1 |
+| <a name="module_ec2"></a> [ec2](#module\_ec2) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-ec2 | v1.3.0 |
+| <a name="module_iam-instance-profile"></a> [iam-instance-profile](#module\_iam-instance-profile) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-iam-instance-profile | v1.3.0 |
+| <a name="module_kms"></a> [kms](#module\_kms) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-kms | v1.4.0 |
+| <a name="module_security-group"></a> [security-group](#module\_security-group) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-security-group | v1.3.0 |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | git::https://gitlab.com/mbasri-terraform/modules/aws/terraform-aws-vpc | v1.8.0 |
 
 ## Resources
 
 | Name | Type |
 |------|------|
-| [aws_ssm_parameter.main](https://registry.terraform.io/providers/hashicorp/aws/5.81.0/docs/resources/ssm_parameter) | resource |
+| [aws_ssm_parameter.main](https://registry.terraform.io/providers/hashicorp/aws/6.4.0/docs/resources/ssm_parameter) | resource |
 | [local_file.run-proxy](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file) | resource |
 | [cloudinit_config.main](https://registry.terraform.io/providers/hashicorp/cloudinit/latest/docs/data-sources/config) | data source |
 
