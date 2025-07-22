@@ -7,9 +7,7 @@ module "ec2" {
   instance_name = local.instance_name
   description   = local.description
 
-  # Europe (Paris) eu-west-3
-  # Amazon Linux 2023 AMI 2023.6.20250107.0 arm64 HVM kernel-6.1
-  ami           = "ami-0ae9eb1a7a2e89c37"
+  ami           = data.aws_ami.latest.id
   instance_type = "m7g.medium"
 
   disable_api_termination = false
@@ -21,7 +19,7 @@ module "ec2" {
     module.security-group.security_group_id
   ]
 
-  user_data = data.cloudinit_config.main.rendered
+  user_data_base64 = data.cloudinit_config.main.rendered
 
   metadata_options = {
     http_endpoint               = "enabled"

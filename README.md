@@ -56,8 +56,8 @@ terraform-docs -c .terraform-docs.yml .
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | 6.4.0 |
-| <a name="provider_cloudinit"></a> [cloudinit](#provider\_cloudinit) | n/a |
-| <a name="provider_local"></a> [local](#provider\_local) | n/a |
+| <a name="provider_cloudinit"></a> [cloudinit](#provider\_cloudinit) | 2.3.7 |
+| <a name="provider_local"></a> [local](#provider\_local) | 2.5.3 |
 
 ## Modules
 
@@ -75,6 +75,7 @@ terraform-docs -c .terraform-docs.yml .
 |------|------|
 | [aws_ssm_parameter.main](https://registry.terraform.io/providers/hashicorp/aws/6.4.0/docs/resources/ssm_parameter) | resource |
 | [local_file.run-proxy](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file) | resource |
+| [aws_ami.latest](https://registry.terraform.io/providers/hashicorp/aws/6.4.0/docs/data-sources/ami) | data source |
 | [cloudinit_config.main](https://registry.terraform.io/providers/hashicorp/cloudinit/latest/docs/data-sources/config) | data source |
 
 ## Inputs
